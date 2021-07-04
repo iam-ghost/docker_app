@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <a id="one"></a>
+  <a id="two"></a>
+  <a id="three"></a>
+  <div class="sidebar">
+    <div class="logo_content">
+      <div class="logo">
+        <div class="logo_name">Docker Planet</div>
+      </div>
+      <i class='bx bx-menu' id="btn" ></i>
+    </div>
+    <ul class="nav_list">
+      <li>
+        <a href="docker.html">
+          <i class='bx bx-home' ></i>
+          <span class="links_name spl">Home</span>
+        </a>
+        <span class="tooltip">Home</span>
+      </li>
+     
+      <li>
+        <a href="show_img.html">
+          <i class='bx bx-images' ></i>
+          <span class="links_name">Display Image</span>
+        </a>
+        <span class="tooltip">Display Image</span>
+      </li>
+      <li>
+        <a href="pull.html">
+          <i class='bx bx-image' ></i>
+          <span class="links_name">Pull Image</span>
+        </a>
+        <span class="tooltip">Pull Image</span>
+      </li>
+      <li>
+        <a href="launch.html">
+          <i class='bx bx-rocket' ></i>
+          <span class="links_name">Launch Container</span>
+        </a>
+        <span class="tooltip">Launch</span>
+      </li>
+      <li>
+        <a href="show.html">
+          <i class='bx bx-box' ></i>
+          <span class="links_name">Show Containers</span>
+        </a>
+        <span class="tooltip">Show</span>
+      </li>
+      <li>
+        <a href="start.html">
+          <i class='bx bx-terminal' ></i>
+          <span class="links_name">Start Container</span>
+        </a>
+        <span class="tooltip">Start</span>
+      </li>
+      <li>
+        <a href="stop.html">
+          <i class='bx bx-stop-circle' ></i>
+          <span class="links_name">Stop Container</span>
+        </a>
+        <span class="tooltip">Stop</span>
+      </li>
+      <li>
+        <a href="delete.html">
+          <i class='bx bx-shield-x' ></i>
+          <span class="links_name">Delete Container</span>
+        </a>
+        <span class="tooltip">Delete</span>
+      </li>
+    </ul>
+  </div>
+  <div class="home_content">
+    <div class="text">Start Container</div>
+
+    <section id="four">
+      <h1> 
+        Enter container name: <input  id="in1" type="text"/> <br /> <br />
+        <button class="butt" onclick="start_con()" id="b1" >Start Container</button> <br />  <br />
+        <textarea id="t1" class="output" readonly></textarea></h1>
+    </section>
+</div>
+  <script>
+   let btn = document.querySelector("#btn");
+   let sidebar = document.querySelector(".sidebar");
+
+   btn.onclick = function() {
+     sidebar.classList.toggle("active");
+     if(btn.classList.contains("bx-menu")){
+       btn.classList.replace("bx-menu" , "bx-menu-alt-right");
+     }else{
+       btn.classList.replace("bx-menu-alt-right", "bx-menu");
+     }
+   }
+  </script>
+
+</body>
+</html>
