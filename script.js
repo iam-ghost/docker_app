@@ -4,7 +4,7 @@ function del(){
 
     var xhr = new XMLHttpRequest()
     
-    xhr.open("GET", `http://${ip}/cgi-bin/cgi_server.py?x=`+document.getElementById("in1").value, true);
+    xhr.open("GET", `http://${ip}/cgi-bin/cgi_server.py?x=` + " " +document.getElementById("in1").value, true);
     
     xhr.send();
     xhr.onload = function (){
@@ -33,7 +33,7 @@ function pull_image(){
 
     var xhr = new XMLHttpRequest()
     
-    xhr.open("GET", `http://${ip}/cgi-bin/cgi_server.py?x=docker pull`+document.getElementById("in1").value, true);
+    xhr.open("GET", `http://${ip}/cgi-bin/cgi_server.py?x=docker pull ` + " " + document.getElementById("in1").value, true);
     
     xhr.send();
     xhr.onload = function (){
@@ -47,7 +47,7 @@ function launch_con(){
 
     var xhr = new XMLHttpRequest()
     
-    xhr.open("GET", `http://${ip}/cgi-bin/cgi_server.py?x=docker run -dit --name `  + document.getElementById("in1").value + " " + document.getElementById("in2").value, true);
+    xhr.open("GET", `http://${ip}/cgi-bin/cgi_server.py?x=docker run -dit --name ` + " " + document.getElementById("in1").value + " " + document.getElementById("in2").value, true);
     
     xhr.send();
     xhr.onload = function (){
@@ -90,7 +90,7 @@ function start_con(){
 
     var xhr = new XMLHttpRequest()
     
-    xhr.open("GET", `http://${ip}/cgi-bin/cgi_server.py?x=docker start `+document.getElementById("in1").value, true);
+    xhr.open("GET", `http://${ip}/cgi-bin/cgi_server.py?x=docker start ` + " " +document.getElementById("in1").value, true);
     
     xhr.send();
     xhr.onload = function (){
@@ -104,7 +104,7 @@ function stop_con(){
 
     var xhr = new XMLHttpRequest()
     
-    xhr.open("GET", `http://${ip}/cgi-bin/cgi_server.py?x=docker stop `+document.getElementById("in1").value, true);
+    xhr.open("GET", `http://${ip}/cgi-bin/cgi_server.py?x=docker stop ` +  " " + document.getElementById("in1").value, true);
     
     xhr.send();
     xhr.onload = function (){
@@ -118,7 +118,7 @@ function del_con(){
 
     var xhr = new XMLHttpRequest()
     
-    xhr.open("GET", `http://${ip}/cgi-bin/cgi_server.py?x=docker rm -f  `+document.getElementById("in1").value, true);
+    xhr.open("GET", `http://${ip}/cgi-bin/cgi_server.py?x=docker rm -f  ` + " " +document.getElementById("in1").value, true);
     
     xhr.send();
     xhr.onload = function (){
